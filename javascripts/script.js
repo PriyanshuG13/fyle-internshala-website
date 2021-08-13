@@ -1,6 +1,14 @@
 const pop_up = document.getElementById("pop-up");
 const contact_us = document.getElementById("contact-us");
 const form = document.getElementById("form");
+const email = document.querySelector('input[name="email"]');
+const first_name = document.querySelector('input[name="first-name"]');
+const last_name = document.querySelector('input[name="last-name"]');
+const check = document.querySelector('input[name="terms-and-conditions"]');
+const buttonsWrapper = document.querySelector(".slides-container-navigator");
+const slides = document.querySelector(".slides");
+
+document.getElementById("default-tab").click();
 
 contact_us.onclick = function () {
     pop_up.style.display = "block";
@@ -8,6 +16,9 @@ contact_us.onclick = function () {
 
 window.onclick = function (event) {
     if (event.target === pop_up) {
+        email.value = "";
+        first_name.value = "";
+        last_name.value = "";
         pop_up.style.display = "none";
     }
 }
@@ -15,28 +26,23 @@ window.onclick = function (event) {
 form.addEventListener("submit", (e)=>{
     e.preventDefault();
 
-    const check = document.querySelector('input[name="terms-and-conditions"]').value;
-    const email = document.querySelector('input[name="email"]');
-    const first_name = document.querySelector('input[name="first-name"]');
-    const last_name = document.querySelector('input[name="last-name"]');
-
-    if(check==="on"){
+    if(check.value === "on"){
         const formData = new FormData();
         formData.append(
             'Email',
             email.value
         )
         formData.append(
-            'First Name',
+            'First_Name',
             first_name.value
         )
         formData.append(
-            'Last Name',
+            'Last_Name',
             last_name.value
         )
         formData.append(
-            'Terms and Conditions',
-            true
+            'Terms_and_Conditions',
+            "check"
         )
 
         fetch("https://getform.io/f/3ecec769-3953-44b4-bc46-b0d4e4ca15a8", {
@@ -53,11 +59,8 @@ form.addEventListener("submit", (e)=>{
         pop_up.style.display = "none";
     }
     else {
-
     }
 });
-
-document.getElementById("default-tab").click();
 
 function openTab(evt, tab) {
     let i, tabcontent, tablinks;
@@ -72,10 +75,6 @@ function openTab(evt, tab) {
     document.getElementById(tab).style.display = "block";
     evt.currentTarget.className += " active";
 }
-
-
-const buttonsWrapper = document.querySelector(".slides-container-navigator");
-const slides = document.querySelector(".slides");
 
 buttonsWrapper.addEventListener("click", e => {
     if (e.target.nodeName === "SPAN") {
