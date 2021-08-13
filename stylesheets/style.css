@@ -282,7 +282,6 @@ body{
     text-align: left;
     color: black;
     text-transform: none;
-    padding-left: 0;
     margin: 0;
 }
 
@@ -291,6 +290,7 @@ body{
 }
 
 .container:nth-child(4) .tab-header-content:hover{
+    padding: 8px 28px;
     border: #F44356 solid 2px;
 }
 
