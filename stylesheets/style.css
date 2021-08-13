@@ -438,7 +438,7 @@ body{
 
 .pop-up-form .input-box input{
     width: 94%;
-    padding: 10px;
+    padding: 10px 0;
     font-size: 16px;
     color: #2D3142;
     outline: none;
