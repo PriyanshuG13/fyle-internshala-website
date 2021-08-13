@@ -447,7 +447,7 @@ body{
 }
 
 .pop-up-form .input-box input::placeholder{
-    color: rgba(0, 0, 0, 0);
+    /*color: rgba(0, 0, 0, 0);*/
 }
 
 .pop-up-form .input-box label{
@@ -458,6 +458,7 @@ body{
     font-size: 16px;
     color: lightgrey;
     pointer-events: none;
+    opacity: 0;
     transition: .2s;
 }
 
@@ -466,6 +467,7 @@ body{
     top: -20px;
     left: 0;
     color: #FF3147;
+    opacity: 1;
     font-size: 12px;
 }
 
