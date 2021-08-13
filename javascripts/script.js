@@ -26,7 +26,7 @@ window.onclick = function (event) {
 form.addEventListener("submit", (e)=>{
     e.preventDefault();
 
-    if(check.value === "on"){
+    if(check.checked && email.value && first_name.value && last_name.value){
         const formData = new FormData();
         formData.append(
             'Email',
@@ -42,23 +42,23 @@ form.addEventListener("submit", (e)=>{
         )
         formData.append(
             'Terms_and_Conditions',
-            "check"
+            check.checked
         )
 
         fetch("https://getform.io/f/3ecec769-3953-44b4-bc46-b0d4e4ca15a8", {
             method: "POST",
             body: formData,
-        })
-            .then(response =>{
-                console.log(response);
-            })
-            .catch(error => console.log(error))
+        }).then(response =>{
+            alert(`Response Sent...`);
+            console.log(response);
+        }).catch(error => console.log(error));
         email.value = "";
         first_name.value = "";
         last_name.value = "";
         pop_up.style.display = "none";
     }
     else {
+        alert("Please fill all the fields and check the checkbox to proceed further.");
     }
 });
 
