@@ -436,7 +436,7 @@ body{
     position: relative;
 }
 
-.input-box input{
+.pop-up-form .input-box input{
     width: 94%;
     padding: 10px;
     font-size: 16px;
@@ -446,11 +446,11 @@ body{
     border-bottom: lightgrey 1px solid;
 }
 
-.input-box input::placeholder{
+.pop-up-form .input-box input::placeholder{
     color: rgba(0, 0, 0, 0);
 }
 
-.input-box .floating-label{
+.pop-up-form .input-box label{
     position: absolute;
     top:0;
     left: 0;
@@ -461,8 +461,8 @@ body{
     transition: .2s;
 }
 
-.input-box input:focus ~ .floating-label,
-.input-box input:active ~ .floating-label{
+.pop-up-form .input-box input:focus ~ label,
+.pop-up-form .input-box input:not(:placeholder-shown) ~ label{
     top: -20px;
     left: 0;
     color: #FF3147;
