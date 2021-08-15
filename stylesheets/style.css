@@ -73,6 +73,7 @@ body{
 .container:nth-child(1) input{
     background-color: #FF3147;
     margin: 30px 0 100px 0;
+    font-size: 12px;
     width: 140px;
     height: 40px;
     border: none;
@@ -169,6 +170,7 @@ body{
 .container:nth-child(2) .card-overlay input{
     margin: 30px 0 70px 0;
     text-align: left;
+    font-size: 11px;
     width: 150px;
     height: 40px;
     padding-left: 20px;
