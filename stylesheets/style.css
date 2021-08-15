@@ -39,7 +39,7 @@ body{
 .container p{
     text-align: left;
     font-family: "Poppins", sans-serif;
-    font-size: small;
+    font-size: 12px;
     font-weight: normal;
     line-height: 22px;
 }
@@ -105,7 +105,7 @@ body{
 }
 
 .container:nth-child(2) p{
-    margin: 10px 50px;
+    margin: 10px 40px;
     line-height: 20px;
 }
 
@@ -240,13 +240,13 @@ body{
     text-align: left;
     font-size: 15px;
     font-family: Poppins, sans-serif;
-    font-weight: bold;
 }
 
 .container:nth-child(3) div .box p{
-    margin-top: 0;
+    margin-top: 5px;
+    font-size: 11px;
     line-height: 20px;
-    padding-right: 20px;
+    padding-right: 18px;
 }
 
 .container:nth-child(4){
@@ -343,14 +343,47 @@ body{
 
 .container:nth-child(5) div .card img{
     padding-top: 10px;
+    margin-bottom: 20px;
     width: 15%;
+}
+
+#tick-mark {
+    position: relative;
+    display: inline-block;
+    background: transparent url("../assets/Path 4402.svg") no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+#tick-mark::before {
+    position: absolute;
+    left: 22%;
+    top: 28%;
+    height: 30%;
+    width: 5px;
+    background-color: #FF3147;
+    content: "";
+    transform: translateX(10px) rotate(-45deg);
+    transform-origin: left bottom;
+}
+
+#tick-mark::after {
+    position: absolute;
+    left: 26%;
+    bottom: 43%;
+    height: 5px;
+    width: 70%;
+    background-color: #FF3149;
+    content: "";
+    transform: translateX(10px) rotate(-45deg);
+    transform-origin: left bottom;
 }
 
 .container:nth-child(5) div .card h1{
     text-align: left;
     font-size: 50px;
     font-family: "Poppins", sans-serif;
-    font-weight: normal;
+    font-weight: lighter;
 }
 
 .container:nth-child(5) div .card label{
