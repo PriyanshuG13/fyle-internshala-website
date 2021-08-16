@@ -48,12 +48,12 @@ body{
 .container:nth-child(1){
     position: relative;
     width: 1000px;
-    grid-template-columns: 48% 52%;
-    /*grid-template-columns: 48% 46%;*/
-    /*grid-gap: 2.5%;*/
-    grid-gap: 1%;
-    /*padding: 50px;*/
-    padding: 70px 0 70px 100px;
+    /*grid-template-columns: 48% 52%;*/
+    grid-template-columns: 48% 46%;
+    grid-gap: 2.5%;
+    /*grid-gap: 1%;*/
+    padding: 50px;
+    /*padding: 70px 0 70px 100px;*/
     place-self: center;
 
 }
@@ -99,9 +99,9 @@ body{
 .container:nth-child(1) img{
     display: grid;
     position: relative;
-    right: -70px;
-    height: 40vw;
-    /*height: 32vw;*/
+    /*right: -70px;*/
+    /*height: 570px;*/
+    height: 450px;
     margin-top: 0;
 }
 
@@ -112,9 +112,9 @@ body{
 
 .inner-container{
     position: relative;
-    right: -135px;
-    width: 1150px;
-    /*width: 1000px;*/
+    /*right: -135px;*/
+    /*width: 1150px;*/
+    width: 1000px;
 }
 
 .inner-container div{
