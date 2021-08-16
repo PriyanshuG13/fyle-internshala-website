@@ -6,13 +6,14 @@ body {
 
 body{
     display: grid;
-    grid-template-rows: 750px auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
 }
 
 .container{
     display: grid;
     padding: 70px 0;
     place-items: center;
+    background: white;
 }
 
 .container h3{
@@ -45,9 +46,16 @@ body{
 }
 
 .container:nth-child(1){
-    background: white;
-    padding: 60px 0 60px 270px;
-    grid-template-columns: 40% 60%;
+    /*position: relative;*/
+    /*right: -30px;*/
+    width: 1000px;
+    /*grid-template-columns: 48% 52%;*/
+    grid-template-columns: 48% 46%;
+    grid-gap: 2.5%;
+    padding: 50px;
+    /*padding: 70px 0 70px 100px;*/
+    place-self: center;
+
 }
 
 .container:nth-child(1) div{
@@ -90,49 +98,59 @@ body{
 
 .container:nth-child(1) img{
     display: grid;
+    /*position: relative;*/
+    /*right: -70px;*/
+    /*height: 40vw;*/
+    height: 32vw;
     margin-top: 0;
 }
 
 .container:nth-child(2){
-    place-items: normal;
-    padding-left: 270px;
     background: #FAFAFA;
+    place-items: center;
 }
 
-.container:nth-child(2) div{
+.inner-container{
+    position: relative;
+    /*right: -135px;*/
+    /*width: 1150px;*/
+    width: 1000px;
+}
+
+.inner-container div{
     display: grid;
-    grid-template-columns: 30% 45%;
+    grid-template-columns: 350px 525px;
 }
 
-.container:nth-child(2) p{
+.inner-container p{
     margin: 10px 40px;
     line-height: 20px;
 }
 
-.container:nth-child(2) .slides-container{
+.inner-container .slides-container{
     display: grid;
     overflow: hidden;
     grid-gap: 25px;
     height: 400px;
 }
 
-.container:nth-child(2) .slides-container .slides{
+.inner-container .slides-container .slides{
     display: grid;
     grid-template-columns: repeat(20, auto);
     grid-gap: 20px;
     transition: all 1s ease-in-out;
 }
 
-.container:nth-child(2) .card{
+.inner-container .card{
     display: grid;
     grid-template-columns: auto;
 }
 
-.container:nth-child(2) .card img{
+.inner-container .card img{
     width: 280px;
 }
 
-.container:nth-child(2) .card-overlay {
+.inner-container .card-overlay {
     display: flex;
     position: relative;
     top: -400px;
@@ -146,20 +164,20 @@ body{
     transition: .4s ease;
 }
 
-.container:nth-child(2) .card-overlay img{
+.inner-container .card-overlay img{
     height: 45px;
     margin-top: 80px;
     margin-bottom: 20px;
 }
 
-.container:nth-child(2) .card-overlay h3{
+.inner-container .card-overlay h3{
     color: #FFFFFF;
     font-size: larger;
     font-weight: normal;
     margin: 0;
 }
 
-.container:nth-child(2) .card-overlay p{
+.inner-container .card-overlay p{
     color: #FFFFFF;
     text-align: center;
     font-size: 12px;
@@ -167,7 +185,7 @@ body{
     margin: 0;
 }
 
-.container:nth-child(2) .card-overlay input{
+.inner-container .card-overlay input{
     margin: 30px 0 70px 0;
     text-align: left;
     font-size: 11px;
@@ -181,24 +199,24 @@ body{
     background: white url("../assets/arrow red.svg") 100px 15px no-repeat;
 }
 
-.container:nth-child(2) .card-overlay input:hover{
+.inner-container .card-overlay input:hover{
     background: #FF3147 url("../assets/arrow white.svg") 100px 14px no-repeat;
     border: 1px solid #FFFFFF;
     color: #FFFFFF;
 }
 
-.container:nth-child(2) .card:hover .card-overlay{
+.inner-container .card:hover .card-overlay{
     transform: scale(1);
 }
 
-.container:nth-child(2) .slides-container-navigator{
+.inner-container .slides-container-navigator{
     margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(3, 40px);
     grid-gap: 5px;
 }
 
-.container:nth-child(2) .slides-container-navigator .navigator-dot{
+.inner-container .slides-container-navigator .navigator-dot{
     display: grid;
     width: 30px;
     height: 30px;
@@ -206,8 +224,8 @@ body{
     background: transparent url("../assets/2.svg") 0 0 no-repeat padding-box;
 }
 
-.container:nth-child(2) .slides-container-navigator .navigator-dot:hover,
-.container:nth-child(2) .slides-container-navigator .navigator-dot.active{
+.inner-container .slides-container-navigator .navigator-dot:hover,
+.inner-container .slides-container-navigator .navigator-dot.active{
     margin: 0;
     background: transparent url("../assets/1.svg") 0 0 no-repeat padding-box;
     transition: .3s ease-in;
@@ -657,4 +675,11 @@ body{
     background-color: #FFFFFF;
     border: 1px solid #F44356;
     color: #F44356;
+}
+
+
+@media (width: 1920px){
+    /*.container:nth-child(2){*/
+    /*    padding-left: 27vw;*/
+    /*}*/
 }
